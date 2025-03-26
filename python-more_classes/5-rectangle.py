@@ -1,20 +1,22 @@
 #!/usr/bin/python3
 """Module for Rectangle class with deletion message."""
 
+
+
 class Rectangle:
-    """Defines a rectangle with a deletion message."""
+    """Defines a rectangle that prints a message when deleted."""
     def __init__(self, width=0, height=0):
         self.width = width
         self.height = height
 
     @property
     def width(self):
-        """Retrieves the width."""
+        """Retrieve the width."""
         return self.__width
 
     @width.setter
     def width(self, value):
-        """Sets the width ensuring it is an integer >= 0."""
+        """Set the width ensuring it is an integer >= 0."""
         if not isinstance(value, int):
             raise TypeError("width must be an integer")
         if value < 0:
@@ -23,12 +25,12 @@ class Rectangle:
 
     @property
     def height(self):
-        """Retrieves the height."""
+        """Retrieve the height."""
         return self.__height
 
     @height.setter
     def height(self, value):
-        """Sets the height ensuring it is an integer >= 0."""
+        """Set the height ensuring it is an integer >= 0."""
         if not isinstance(value, int):
             raise TypeError("height must be an integer")
         if value < 0:
@@ -36,25 +38,25 @@ class Rectangle:
         self.__height = value
 
     def area(self):
-        """Returns the rectangle area."""
+        """Return the rectangle area."""
         return self.__width * self.__height
 
     def perimeter(self):
-        """Returns the rectangle perimeter or 0 if either dimension is 0."""
+        """Return the rectangle perimeter or 0 if either dimension is 0."""
         if self.__width == 0 or self.__height == 0:
             return 0
         return 2 * (self.__width + self.__height)
 
     def __str__(self):
-        """Returns the printable representation using '#' characters."""
+        """Return the printable representation using '#' characters."""
         if self.__width == 0 or self.__height == 0:
             return ""
         return "\n".join(["#" * self.__width for _ in range(self.__height)])
 
     def __repr__(self):
-        """Returns a string representation to recreate the instance via eval()."""
+        """Return a string representation to recreate the instance via eval()."""
         return "Rectangle({}, {})".format(self.__width, self.__height)
 
     def __del__(self):
-        """Prints a message when an instance is deleted."""
+        """Print a message when an instance is deleted."""
         print("Bye rectangle...")
