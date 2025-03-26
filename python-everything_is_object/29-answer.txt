@@ -1,0 +1,24 @@
+Picture: https://example.com/your-blog-image.jpg
+
+Introduction:
+In this project I learned that everything in Python is an object. Each object has an identity, type, and value.
+
+id and type:
+The built-in functions id() and type() help us inspect an object's identity and type. For example, id(89) returns its memory address, and type(89) returns <class 'int'>.
+
+Mutable objects:
+Mutable objects like lists can change their content. This means methods like append() can modify the object in-place.
+
+Immutable objects:
+Immutable objects like integers and strings cannot be changed after they are created. Any "modification" creates a new object.
+
+Why does it matter:
+Understanding mutability is crucial since it affects performance and behavior in functions, loops, and conditional statements. Mutable objects may lead to unexpected side effects if shared.
+
+How arguments are passed:
+Arguments in Python are passed by object reference. Thus, mutable objects can be altered within functions, while immutable objects remain unchanged unless reassigned.
+
+Blog post URL(s):
+https://medium.com/@yourusername/mutable-vs-immutable-objects
+https://www.linkedin.com/in/yourprofile
+
