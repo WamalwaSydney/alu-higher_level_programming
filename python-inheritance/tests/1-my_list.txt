@@ -1,0 +1,61 @@
+=======================
+Test for 1-my_list.py
+=======================
+
+Import the module:
+>>> MyList = __import__('1-my_list').MyList
+
+Basic test with positive integers:
+>>> my_list = MyList()
+>>> my_list.append(1)
+>>> my_list.append(4)
+>>> my_list.append(2)
+>>> my_list.append(3)
+>>> my_list.append(5)
+>>> print(my_list)
+[1, 4, 2, 3, 5]
+>>> my_list.print_sorted()
+[1, 2, 3, 4, 5]
+>>> print(my_list)
+[1, 4, 2, 3, 5]
+
+Test with empty list:
+>>> empty_list = MyList()
+>>> empty_list.print_sorted()
+[]
+
+Test with negative integers:
+>>> neg_list = MyList()
+>>> neg_list.append(-1)
+>>> neg_list.append(-4)
+>>> neg_list.append(-2)
+>>> neg_list.append(-3)
+>>> neg_list.append(-5)
+>>> neg_list.print_sorted()
+[-5, -4, -3, -2, -1]
+
+Test with mixed numbers:
+>>> mixed_list = MyList()
+>>> mixed_list.append(-10)
+>>> mixed_list.append(10)
+>>> mixed_list.append(0)
+>>> mixed_list.append(5)
+>>> mixed_list.append(-5)
+>>> mixed_list.print_sorted()
+[-10, -5, 0, 5, 10]
+
+Test with duplicates:
+>>> dupe_list = MyList()
+>>> dupe_list.append(1)
+>>> dupe_list.append(1)
+>>> dupe_list.append(2)
+>>> dupe_list.append(2)
+>>> dupe_list.print_sorted()
+[1, 1, 2, 2]
+
+Test that the original list is unmodified:
+>>> orig_list = MyList([5, 4, 3, 2, 1])
+>>> orig_list.print_sorted()
+[1, 2, 3, 4, 5]
+>>> print(orig_list)
+[5, 4, 3, 2, 1]
