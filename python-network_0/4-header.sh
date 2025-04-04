@@ -1,3 +1,3 @@
 #!/bin/bash
-# Send GET request with required header and force response check
-curl -sL -H "X-HolbertonSchool-User-Id: 98" -H "Accept: */*" "$1"
+# Send GET request with required header and display response body
+curl -sL -H "X-HolbertonSchool-User-Id: 98" "$1"
