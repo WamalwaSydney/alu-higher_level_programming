@@ -2,7 +2,6 @@
 """Module for Rectangle class with string representation."""
 
 
-
 class Rectangle:
     """Defines a rectangle with string representations."""
     def __init__(self, width=0, height=0):
