@@ -1,3 +1,4 @@
 #!/bin/bash
-# Script that displays the body of a 200 status code response
-curl -s -w "%{http_code}" "$1" | grep -A1 "200" | tail -n 1
+# Only display body for HTTP 200
+curl -s -L -w "%{http_code}" "$1" -o tmp_response && \
+[ "$(cat tmp_response | tail -c 3)" = "200" ] && head -c -3 tmp_response && echo "" || true
