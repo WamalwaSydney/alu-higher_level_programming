@@ -5,7 +5,7 @@ def max_integer(list=[]):
     """Finds and returns the max integer in a list of integers.
     
     Args:
-        list (list, optional): List of integers. Defaults to [].
+        list (list): List of integers.
     
     Returns:
         int or None: Max integer in list, or None if list is empty.
