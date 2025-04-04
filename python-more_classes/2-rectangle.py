@@ -2,7 +2,6 @@
 """Module for Rectangle class with area and perimeter methods."""
 
 
-
 class Rectangle:
     """Defines a rectangle with width, height, area, and perimeter."""
     def __init__(self, width=0, height=0):

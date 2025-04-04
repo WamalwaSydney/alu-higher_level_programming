@@ -2,7 +2,6 @@
 """Module for Rectangle class with width and height properties."""
 
 
-
 class Rectangle:
     """Defines a rectangle by its width and height."""
     def __init__(self, width=0, height=0):
